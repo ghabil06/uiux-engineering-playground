@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRISM — UI/UX Engineering Playground</title>
+    <meta name="description" content="Discover, operate and compare 63 functional UI/UX demos: product interfaces, 12 visual styles, 17 interaction patterns, 20 UX laboratory demos, states, accessibility and testing labs." />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%237c3aed'/%3E%3Ctext x='16' y='22' font-size='16' text-anchor='middle' fill='white' font-weight='900'%3E%E2%97%88%3C/text%3E%3C/svg%3E" />
+    <!-- Pre-paint theme: applies saved theme before first render to avoid a light/dark flash.
+         Mirrors THEME_STORAGE_KEY / THEME_CLASS in src/design-system/tokens.ts -->
+    <script>
+      try {
+        if (localStorage.getItem("prism-theme") === "dark") document.documentElement.classList.add("dark");
+      } catch (e) { /* storage unavailable — default to light */ }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
